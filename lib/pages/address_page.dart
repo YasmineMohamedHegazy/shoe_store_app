@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoes_shopapp/pages/summary_page.dart';
-
-
 
 class AddressPage extends StatefulWidget {
   const AddressPage({super.key});
@@ -36,16 +35,16 @@ class _AddressPageState extends State<AddressPage> {
       );
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         backgroundColor: Colors.grey[100],
-        title: const Text('Enter Delivery Address')),
+        title: const Text('Enter Delivery Address')
+        ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.r),
         child: Form(
           key: _formKey,
           child: ListView(
@@ -56,7 +55,7 @@ class _AddressPageState extends State<AddressPage> {
                 decoration: const InputDecoration(labelText: 'Full Name'),
                 validator: (value) => value!.isEmpty ? 'Enter your name' : null,
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // Phone
               TextFormField(
@@ -65,7 +64,7 @@ class _AddressPageState extends State<AddressPage> {
                 keyboardType: TextInputType.phone,
                 validator: (value) => value!.isEmpty ? 'Enter phone number' : null,
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // Street Address
               TextFormField(
@@ -73,7 +72,7 @@ class _AddressPageState extends State<AddressPage> {
                 decoration: const InputDecoration(labelText: 'Street Address'),
                 validator: (value) => value!.isEmpty ? 'Enter address' : null,
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // City
               TextFormField(
@@ -81,15 +80,15 @@ class _AddressPageState extends State<AddressPage> {
                 decoration: const InputDecoration(labelText: 'City'),
                 validator: (value) => value!.isEmpty ? 'Enter city' : null,
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // Continue Button
               ElevatedButton(
                 onPressed: goToSummaryPage,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
+                  padding: EdgeInsets.symmetric(vertical: 16.h),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r))
                 ),
                 child: const Text(
                   'Continue',

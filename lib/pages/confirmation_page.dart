@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ConfirmationPage extends StatelessWidget {
   const ConfirmationPage({super.key});
@@ -9,38 +10,38 @@ class ConfirmationPage extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(24.0.r),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
+              Icon(
                 Icons.check_circle_outline,
                 color: Colors.green,
-                size: 100,
+                size: 100.r,
               ),
-              const SizedBox(height: 20),
-              const Text(
+              SizedBox(height: 20.h),
+              Text(
                 "Order Placed Successfully!",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 10),
-              const Text(
+              SizedBox(height: 10.h),
+              Text(
                 "Thank you for shopping with us.\nYour order is being processed.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16.sp, color: Colors.grey),
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
               ElevatedButton(
                 onPressed: () {
                   Navigator.popUntil(context, (route) => route.isFirst); // back to home
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 16.h),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
                 ),
                 child: const Text("Continue Shopping", style: TextStyle(color: Colors.white)),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoes_shopapp/components/bottom_nav_bar.dart';
 import 'package:shoes_shopapp/pages/cart_page.dart';
 import 'package:shoes_shopapp/pages/home_page2.dart';
@@ -28,7 +29,6 @@ class _HomePageState extends State<HomePage>{
     const CartPage(),
   ];
 
-
   @override
   Widget build (BuildContext context) {
     return Scaffold(
@@ -50,18 +50,20 @@ class _HomePageState extends State<HomePage>{
       drawer: Drawer(backgroundColor: Colors.white,
       child: Column(
         children: [
-        SizedBox(height: 60),
+        SizedBox(height: 60.h),
         
        //other pages
-       const Padding(
-         padding: const EdgeInsets.only(left: 25.0),
+       Padding(
+         padding: EdgeInsets.only(left: 25.0.w),
          child: ListTile(leading: Icon(Icons.home,color: Colors.black,),title: Text('Home',style: TextStyle(
           color: Colors.black
-         ),)),
-       ),
+         ),
+        )
+      ),
+    ),
 
        Padding(
-         padding: const EdgeInsets.only(left: 25.0),
+         padding: EdgeInsets.only(left: 25.0.w),
          child: ListTile(leading: Icon(Icons.shop,color: Colors.black,),title: Text('Shop',style: TextStyle(
           color: Colors.black
          ),),
@@ -72,21 +74,26 @@ class _HomePageState extends State<HomePage>{
          ,),
        ),
 
-       const Padding(
-         padding: const EdgeInsets.only(left: 25.0),
+       Padding(
+         padding: EdgeInsets.only(left: 25.0.w),
          child: ListTile(leading: Icon(Icons.info,color: Colors.black,),title: Text('About',style: TextStyle(
           color: Colors.black
-         ),)),
-       ),
+         ),
+        )
+      ),
+    ),
 
-       const Padding(
-         padding: const EdgeInsets.only(left: 25.0),
+       Padding(
+         padding: EdgeInsets.only(left: 25.0.w),
          child: ListTile(leading: Icon(Icons.logout,color: Colors.black,),title: Text('Logout',style: TextStyle(
           color: Colors.black
-         ),)),
-       )
-
-      ],),), 
+         ),
+        )
+      ),
+    )
+      ],
+    ),
+  ), 
       body: _pages [_selectedIndex], //it changes the page when a user tap a button
     );
   }

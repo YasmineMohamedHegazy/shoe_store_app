@@ -18,8 +18,8 @@ class BottNavBar extends StatelessWidget {
       tabs: const [
         GButton(icon: Icons.home, text: 'Home',),
         GButton(icon: Icons.shopping_bag_rounded, text: 'Cart',)
-      
-      ]),
+        ]
+      ),
     );
   }
 }
