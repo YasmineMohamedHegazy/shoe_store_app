@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoes_shopapp/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -10,28 +11,28 @@ class IntroPage extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: Center(
         child: Padding(  
-          padding: const EdgeInsets.symmetric(horizontal:25.0), //symmetric means equal padding and hor means on left and right
+          padding: EdgeInsets.symmetric(horizontal:25.0.w), //symmetric means equal padding and hor means on left and right
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, // this makes the whole content at center
             children: [
-              Padding(padding: EdgeInsets.all(25.0)),
+              Padding(padding: EdgeInsets.all(25.0.r)
+              ),
 
-            const SizedBox(height: 48,),
+            SizedBox(height: 48.h),
           
-          //column is a widget, children is a list of widgets
             //logo
         
             //title
-            const Text('Walk Comfy',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+            Text('Walk Comfy',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.sp),
             ),
-            const SizedBox(height: 24,),
+            SizedBox(height: 24.h),
         
             //subtitle
-            const Text('Feel the premium quality',style: TextStyle(fontWeight: FontWeight.bold,
-            fontSize: 16,color: Colors.grey),
+            Text('Feel the premium quality',style: TextStyle(fontWeight: FontWeight.bold,
+            fontSize: 16.sp,color: Colors.grey),
             textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 48,),
+            SizedBox(height: 48.h),
 
             //shop now button
             GestureDetector( //detects touch gestures
@@ -40,19 +41,22 @@ class IntroPage extends StatelessWidget {
                 ) 
                 ),
               child: Container(
-                decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.circular(12)
+                decoration: BoxDecoration(color: Colors.grey[900],borderRadius: BorderRadius.circular(12.r)
                 ),
                 //border radius circular khalet el button circular
-                padding: const EdgeInsets.all(25),
-                child: const Center(child: const Text('Shop Now',style: TextStyle(
-                  color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),)),
+                padding: EdgeInsets.all(25.r),
+                child: Center(
+                  child: Text('Shop Now',style: TextStyle(
+                  color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16.sp),
+                  )
+                ),
               ),
             )
         
           ],     
         ),
       ),
-      )
+    )
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:shoes_shopapp/components/shoe_tile.dart';
 import 'package:shoes_shopapp/models/cart.dart';
@@ -26,13 +27,13 @@ class ShopPage extends StatelessWidget {
       ),
       backgroundColor: Colors.grey[100],
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.r),
         child: ListView.builder(
           itemCount: allShoes.length,
           itemBuilder: (context, index) {
             final shoe = allShoes[index];
             return Padding(
-              padding: const EdgeInsets.only(bottom: 20.0),
+              padding: EdgeInsets.only(bottom: 20.0.h),
               child: ShoeTile(
                 shoe: shoe,
                 onTap: () {

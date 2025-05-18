@@ -10,7 +10,7 @@ class Cart extends ChangeNotifier {
      imagepath: 'lib/images/shoe4.png', description: 'Sportive running Shoes'),
 
      Shoe(
-      name: 'white jean sneakers', price: '400',
+      name: 'jean sneakers', price: '400',
       imagepath: 'lib/images/shoe5.png', description: 'Elegant Shoes'),
 
      Shoe(
